@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galih Patma | Mobile & Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio pribadi Galih Patma - Mobile & Web Developer. Fokus membangun aplikasi lintas platform, sistem backend, dan analisis proses bisnis.">
+  <meta name="author" content="Galih Patma">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/im.jpeg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Elements -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo" id="nav-logo">
+        <span class="logo-text">Galpm<span class="accent-dot">21</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active" id="link-home">Home</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link" id="link-skills">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Navbar Action -->
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-sm cv-btn-open" id="nav-cv-btn">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>CV</span>
+        </button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Buka Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Menu Mobile">
+    <div class="drawer-header">
+      <span class="drawer-title">Galpm<span class="accent-dot">21</span></span>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Tutup Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="#home" class="drawer-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#skills" class="drawer-link"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+      <li><a href="#projects" class="drawer-link"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+      <li><a href="#contact" class="drawer-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <button class="btn btn-primary btn-full cv-btn-open">
+        <i class="fa-solid fa-file-arrow-down"></i> Unduh CV Lengkap
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        
+        <!-- Hero Information Content -->
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Tersedia untuk Magang & Proyek Kolaborasi</span>
+          </div>
+
+          <p class="hero-greeting">Halo, Saya</p>
+          <h1 class="hero-name">Galih Patma</h1>
+          
+          <div class="hero-typing-wrap">
+            <span class="typing-prefix">Saya seorang </span>
+            <span class="typing-text" id="typing-text">Mobile & Web Developer</span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Fokus membangun aplikasi lintas platform yang responsif, rapi, dan berperforma tinggi. 
+            Berpengalaman dalam pengembangan antarmuka modern, sistem backend terintegrasi, dan pemodelan proses bisnis yang efisien.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary cv-btn-open" id="hero-download-cv">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Unduh CV Saya</span>
+            </button>
+            <a href="#contact" class="btn btn-glass" id="hero-contact-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+
+          <!-- Social Quick Links -->
+          <div class="hero-socials">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:galihpatma16@gmail.com" class="social-icon" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Profile Visual with Glowing Aura -->
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-ring-outer"></div>
+            <div class="avatar-ring-inner">
+              <img src="images/im.jpeg" alt="Foto Profil Galih Patma" class="avatar-image" id="hero-avatar">
+            </div>
+            
+            <!-- Floating Achievement Badges -->
+            <div class="floating-badge badge-top">
+              <i class="fa-solid fa-code"></i>
+              <span>Clean Architecture</span>
+            </div>
+            <div class="floating-badge badge-bottom">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Fast & Responsive</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#skills" class="scroll-down-indicator" aria-label="Gulir ke bawah">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+      </a>
+    </section>
+
+    <!-- ==================== 2. SKILLS SECTION ==================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Kompetensi Teknis</span>
+          <h2 class="section-title">Keahlian Utama</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Kombinasi teknologi mutakhir untuk menciptakan solusi digital yang stabil, aman, dan memikat.
+          </p>
+        </div>
+
+        <!-- Skills Grid with Animated Bars -->
+        <div class="skills-grid">
+          
+          <!-- Skill Card 1: Flutter & Dart -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-cyan">
+                <i class="fa-brands fa-flutter"></i>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-title">Flutter & Dart</h3>
+                <span class="skill-level-text">Mobile & Cross-Platform UI</span>
+              </div>
+              <span class="skill-percentage">80%</span>
+            </div>
+            <p class="skill-desc">
+              Pengembangan aplikasi Android & iOS responsif, manajemen state, widget kustom, dan animasi halus.
+            </p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="80" style="width: 0%;"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>State Management</span>
+              <span>REST API</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: Web Backend Java -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-orange">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-title">Web Backend (Java)</h3>
+                <span class="skill-level-text">Server-Side & Architecture</span>
+              </div>
+              <span class="skill-percentage">60%</span>
+            </div>
+            <p class="skill-desc">
+              Pembangunan arsitektur backend andal berbasis Java Servlet, JSP, JDBC, dan konsep OOP yang terstruktur.
+            </p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="60" style="width: 0%;"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Java</span>
+              <span>JSP / Servlet</span>
+              <span>JDBC</span>
+              <span>MVC</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Database & SQL -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-purple">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-title">Database & SQL</h3>
+                <span class="skill-level-text">Relational Data Management</span>
+              </div>
+              <span class="skill-percentage">60%</span>
+            </div>
+            <p class="skill-desc">
+              Perancangan skema relasional, normalisasi tabel, query SQL efisien, dan integrasi MariaDB/MySQL.
+            </p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="60" style="width: 0%;"></div>
+            </div>
+            <div class="skill-tags">
+              <span>MariaDB</span>
+              <span>MySQL</span>
+              <span>Query Optimization</span>
+              <span>ERD</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: Modern Web Frontend -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-blue">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-title">HTML5, CSS3 & JavaScript</h3>
+                <span class="skill-level-text">Modern Web Standards</span>
+              </div>
+              <span class="skill-percentage">75%</span>
+            </div>
+            <p class="skill-desc">
+              Membangun tampilan web responsif, glassmorphism modern, fleksibilitas CSS Flexbox & Grid, serta manipulasi DOM dinamis.
+            </p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="75" style="width: 0%;"></div>
+            </div>
+            <div class="skill-tags">
+              <span>HTML5 Semantic</span>
+              <span>CSS3 Modern</span>
+              <span>Vanilla JS</span>
+              <span>Responsive Design</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. PROJECTS SECTION ==================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Portofolio Karya</span>
+          <h2 class="section-title">Proyek Terbaru</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Koleksi proyek nyata dan studi kasus akademis yang telah saya rancang dan kembangkan.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project Card 1: BMI Calculator -->
+          <article class="project-card" data-tilt>
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-folder-icon">
+                  <i class="fa-regular fa-folder-open"></i>
+                </div>
+                <div class="project-links">
+                  <span class="project-arrow-icon" aria-hidden="true">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <span class="project-category">Mobile Utility App</span>
+                <h3 class="project-title">Aplikasi Kalkulator BMI</h3>
+                <p class="project-description">
+                  Aplikasi utilitas kesehatan dengan antarmuka dinamis dan responsif untuk melacak indeks massa tubuh, kategori berat badan, serta rekomendasi kesehatan harian.
+                </p>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">UI/UX</span>
+                  <span class="tag">Dart</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Clinic Management -->
+          <article class="project-card" data-tilt>
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-folder-icon">
+                  <i class="fa-regular fa-folder-open"></i>
+                </div>
+                <div class="project-links">
+                  <span class="project-arrow-icon" aria-hidden="true">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <span class="project-category">Fullstack Web System</span>
+                <h3 class="project-title">Sistem Manajemen Klinik</h3>
+                <p class="project-description">
+                  Backend web berbasis Java Servlet &amp; JDBC terintegrasi dengan MariaDB untuk alur administrasi medis, pendaftaran pasien, pencatatan rekam medis, dan inventaris obat.
+                </p>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">JSP / Servlet</span>
+                  <span class="tag">MariaDB</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3: BPMN Indomaret Analysis -->
+          <article class="project-card" data-tilt>
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-folder-icon">
+                  <i class="fa-regular fa-folder-open"></i>
+                </div>
+                <div class="project-links">
+                  <span class="project-arrow-icon" aria-hidden="true">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <span class="project-category">Process Architecture</span>
+                <h3 class="project-title">Analisis BPMN Indomaret</h3>
+                <p class="project-description">
+                  Pemodelan dan analisis efisiensi struktur proses bisnis retail skala besar menggunakan standar BPMN 2.0 untuk memetakan alur rantai pasok dan kasir secara optimal.
+                </p>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag">BPMN 2.0</span>
+                  <span class="tag">System Analysis</span>
+                  <span class="tag">Process Modeling</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. CONTACT SECTION ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Komunikasi &amp; Kolaborasi</span>
+          <h2 class="section-title">Hubungi Saya</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Punya ide proyek menarik, tawaran magang, atau pertanyaan akademis? Mari terhubung dan berdiskusi!
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          
+          <!-- Contact Info Cards -->
+          <div class="contact-info-col">
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-detail">
+                <h4>Domisili</h4>
+                <p>Indonesia</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="info-detail">
+                <h4>Email</h4>
+                <p><a href="mailto:galihpatma16@gmail.com">galihpatma16@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="info-detail">
+                <h4>WhatsApp</h4>
+                <p><a href="https://wa.me/" target="_blank" rel="noopener noreferrer">Hubungi Langsung</a></p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="info-detail">
+                <h4>Pendidikan</h4>
+                <p>UNPAM SERANG SISTEM INFORMASI SEMESTER 05</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form with Validation & Feedback -->
+          <div class="contact-form-col">
+            <div class="form-container">
+              <form id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Nama Lengkap</label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="contact-name" name="name" class="form-control" placeholder="Masukkan nama Anda..." required>
+                  </div>
+                  <span class="error-msg" id="name-error">Harap isi nama Anda.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Alamat Email</label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="contact-email" name="email" class="form-control" placeholder="nama@email.com" required>
+                  </div>
+                  <span class="error-msg" id="email-error">Harap masukkan format email yang valid.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Pesan Anda</label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-message input-icon textarea-icon"></i>
+                    <textarea id="contact-message" name="message" class="form-control textarea-control" rows="5" placeholder="Tuliskan pesan atau penawaran kerja sama..." required></textarea>
+                  </div>
+                  <span class="error-msg" id="message-error">Harap tuliskan pesan Anda.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Kirim Pesan</span>
+                </button>
+
+                <div class="form-feedback" id="form-feedback" style="display: none;">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Terima kasih! Pesan Anda telah terkirim dengan sukses.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="copyright">
+        &copy; 2026 <strong>Galih Patma</strong> (Galpm21). All Rights Reserved.
+      </p>
+      <p class="footer-note">
+        Dibangun dengan <span class="heart-icon">&hearts;</span> menggunakan Semantic HTML5 &amp; Modern Vanilla CSS.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL PREVIEW & DOWNLOAD CV ==================== -->
+  <div class="cv-modal-backdrop" id="cv-modal-backdrop" aria-hidden="true">
+    <div class="cv-modal-box" role="dialog" aria-labelledby="cv-modal-title">
+      <div class="cv-modal-header">
+        <h3 id="cv-modal-title"><i class="fa-solid fa-id-card"></i> Curriculum Vitae - Galih Patma</h3>
+        <button class="cv-modal-close" id="cv-modal-close" aria-label="Tutup Modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="cv-modal-body" id="cv-printable-area">
+        <div class="cv-paper">
+          <div class="cv-paper-header">
+            <img src="images/im.jpeg" alt="Galih Patma" class="cv-paper-avatar">
+            <div class="cv-paper-title">
+              <h2>Galih Patma</h2>
+              <p class="cv-paper-subtitle">Mobile &amp; Web Developer</p>
+              <p class="cv-paper-contacts">
+                <i class="fa-solid fa-envelope"></i> galihpatma16@gmail.com &nbsp;|&nbsp;
+                <i class="fa-solid fa-location-dot"></i> Indonesia
+              </p>
+            </div>
+          </div>
+          
+          <div class="cv-paper-divider"></div>
+          
+          <div class="cv-paper-section">
+            <h4>Pendidikan</h4>
+            <p><strong>Universitas Pamulang (UNPAM) Serang</strong> — S1 Sistem Informasi (Semester 05)</p>
+          </div>
+
+          <div class="cv-paper-section">
+            <h4>Ringkasan Profesional</h4>
+            <p>
+              Pengembang antarmuka dan sistem aplikasi yang fokus pada pengembangan lintas platform (Flutter), arsitektur web backend Java, dan integrasi basis data SQL. Memiliki ketelitian tinggi dalam mendesain UI/UX yang intuitif serta menganalisis efisiensi proses bisnis (BPMN).
+            </p>
+          </div>
+
+          <div class="cv-paper-section">
+            <h4>Keahlian Utama</h4>
+            <div class="cv-skill-chips">
+              <span class="cv-chip">Flutter & Dart (80%)</span>
+              <span class="cv-chip">Web Backend - Java & JDBC (60%)</span>
+              <span class="cv-chip">MariaDB & SQL (60%)</span>
+              <span class="cv-chip">HTML5 / CSS3 / JavaScript</span>
+              <span class="cv-chip">Analisis BPMN 2.0</span>
+              <span class="cv-chip">Git & GitHub</span>
+            </div>
+          </div>
+
+          <div class="cv-paper-section">
+            <h4>Proyek & Pengalaman</h4>
+            <div class="cv-exp-item">
+              <strong>1. Aplikasi Kalkulator BMI</strong> - <em>Mobile Utility App</em>
+              <p>Mengembangkan aplikasi mobile utilitas kesehatan yang responsif dan interaktif menggunakan Flutter & Dart.</p>
+            </div>
+            <div class="cv-exp-item">
+              <strong>2. Sistem Manajemen Klinik</strong> - <em>Fullstack Web System</em>
+              <p>Membangun sistem informasi klinik berbasis Java Servlet, JSP, JDBC, dan basis data relasional MariaDB.</p>
+            </div>
+            <div class="cv-exp-item">
+              <strong>3. Analisis Proses Bisnis BPMN Indomaret</strong> - <em>System Analysis</em>
+              <p>Melakukan evaluasi dan visualisasi diagram proses bisnis ritel berskala besar dengan notasi standar BPMN 2.0.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cv-modal-footer">
+        <button class="btn btn-outline" id="cv-print-btn">
+          <i class="fa-solid fa-print"></i> Cetak / Simpan PDF
+        </button>
+        <button class="btn btn-primary" id="cv-close-action-btn">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
